@@ -222,6 +222,33 @@ void attendanceSummary() {
     int present=0, absent=0, late=0;
 
     for(int i=0; i<studentCount; i++) {
+@@ -179,3 +201,4 @@ int main() {
+
+}
+    void saveAttendanceToFile() {
+
+    ofstream file("attendance.txt");
+
+    if(!file) {
+        cout << "Error saving file!" << endl;
+        return;
+    }
+
+    file << "Attendance Record\n";
+
+    for(int i=0; i<studentCount; i++) {
+        file << students[i].id << " "
+             << students[i].name << " "
+             << attendanceStatus[i] << endl;
+    }
+
+    file.close();
+
+    cout << "Attendance saved to file successfully!\n";
+}
+    int present=0, absent=0, late=0;
+
+    for(int i=0; i<studentCount; i++) {
         if(attendanceStatus[i]=="P") present++;
         else if(attendanceStatus[i]=="A") absent++;
         else if(attendanceStatus[i]=="L") late++;
@@ -266,4 +293,5 @@ int main() {
 
 
 }
+
 
