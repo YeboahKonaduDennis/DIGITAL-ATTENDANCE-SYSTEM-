@@ -121,6 +121,34 @@ Student students[100];
 string attendanceStatus[100];
 int studentCount = 0;
 AttendanceSession session;
+DIGITAL ATTENANCE SYSTEEM/main.cpp‎
+Original file line number	Diff line number	Diff line change
+@@ -83,7 +83,7 @@ Student students[100];
+string attendanceStatus[100];
+int studentCount = 0;
+AttendanceSession session;
+string attendanceStatus[100];
+void loadStudents() {
+    ifstream file("students.txt");
+    while(file >> students[studentCount].name
+@@ -103,6 +103,13 @@ void saveStudents() {
+}
+
+void addStudent() {
+    void markAttendance() {
+    for(int i = 0; i < studentCount; i++) {
+        cout << "Mark attendance for " << students[i].name << endl;
+        cout << "P = Present, A = Absent, L = Late: ";
+        cin >> attendanceStatus[i];
+    }
+}
+    students[studentCount].registerStudent();
+    studentCount++;
+}
+@@ -171,3 +178,4 @@ int main() {
+    return 0;
+
+}
 string attendanceStatus[100];
 void loadStudents() {
     ifstream file("students.txt");
@@ -238,3 +266,4 @@ int main() {
 
 
 }
+
