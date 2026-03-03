@@ -1,6 +1,43 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
+class AttendanceSession {
+public:
+    string courseCode;
+    string date;
+    string startTime;
+    int duration;
+
+    void createSession() {
+        cout << "Enter Course Code: ";
+        cin >> courseCode;
+
+        cout << "Enter Date: ";
+        cin >> date;
+
+        cout << "Enter Start Time: ";
+        cin >> startTime;
+
+        cout << "Enter Duration (Hours): ";
+        cin >> duration;
+    }
+
+    void displaySession() {
+        cout << "\nSession Created Successfully\n";
+        cout << "Course: " << courseCode << endl;
+        cout << "Date: " << date << endl;
+        cout << "Start Time: " << startTime << endl;
+        cout << "Duration: " << duration << " hours\n";
+    }
+};
+class Student {
+public:
+    string name;
+@@ -141,4 +169,5 @@ int main() {
+    } while(choice != 0);
+
+    return 0;
+}
 #include <fstream>
 class AttendanceSession {
 public:
@@ -198,5 +235,6 @@ int main() {
     } while(choice != 0);
 
     return 0;
+
 
 }
